@@ -20,6 +20,30 @@ function CountOccurences(str, substr) {
 //Control
  console.log(CountOccurences('fdfdsdszYzy', "zy"));
 
-
  
-
+ // Storage
+/**
+ * 
+ * @returns {function}
+ */  
+function storage() {
+    let obj = {};
+    return {
+        setValue: function(key, value){
+            obj[key] = value;
+        },
+        getValue: function(key){
+            return obj[key] ? obj[key] : undefined;
+        }
+    }
+   
+}
+//Control
+  const propsStorage = storage();
+  propsStorage.setValue("name", "Peter");
+  propsStorage.setValue("age", 30);
+  console.log(propsStorage.getValue("name"));
+  console.log(propsStorage.getValue("age"));
+  propsStorage.setValue("age", 31);
+  console.log(propsStorage.getValue("age"));
+  console.log(propsStorage.getValue('occupation'));
