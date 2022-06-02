@@ -47,3 +47,17 @@ function storage() {
   propsStorage.setValue("age", 31);
   console.log(propsStorage.getValue("age"));
   console.log(propsStorage.getValue('occupation'));
+
+
+// toDigitArray
+/**
+ * 
+ * @param {number} number 
+ * @returns {number[]}
+ */
+function toDigitArray(number) {
+    return  Number.isInteger(number)? number.toString().split("").reverse().map((e) => JSON.parse(e)): 'You need to enter an integer number!';
+  }
+//Control
+console.log(toDigitArray(46156));
+
