@@ -61,3 +61,19 @@ function toDigitArray(N) {
 //Control
 console.log(toDigitArray(56799));
 
+
+// roundedRating
+/**
+* 
+* @param {number} rating
+*
+* @return {number}
+ */
+function calculateRoundedRating(rating) {
+    return typeof rating === "number"? Math.round(rating / 0.5) * 0.5 : 'Error! Please, enter the number.';
+}
+//Control
+console.log(calculateRoundedRating(3.666));
+console.log(calculateRoundedRating(1.92));
+console.log(calculateRoundedRating(4.299999));
+console.log(calculateRoundedRating(1.2499999));
