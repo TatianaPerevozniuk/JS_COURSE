@@ -52,12 +52,12 @@ function storage() {
 // toDigitArray
 /**
  * 
- * @param {number} number 
+ * @param {number} N 
  * @returns {number[]}
  */
-function toDigitArray(number) {
-    return  Number.isInteger(number)? number.toString().split("").reverse().map((e) => JSON.parse(e)): 'You need to enter an integer number!';
+function toDigitArray(N) {
+    return  Number.isInteger(N) &&  N > 0? N.toString().split("").reverse().map((e) => JSON.parse(e)): 'You need to enter an integer greater than 0!';
   }
 //Control
-console.log(toDigitArray(46156));
+console.log(toDigitArray(56799));
 
