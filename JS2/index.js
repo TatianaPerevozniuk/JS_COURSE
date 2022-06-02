@@ -77,3 +77,20 @@ console.log(calculateRoundedRating(3.666));
 console.log(calculateRoundedRating(1.92));
 console.log(calculateRoundedRating(4.299999));
 console.log(calculateRoundedRating(1.2499999));
+
+
+//countWords
+/**
+ * 
+ * @param {string} text 
+ * @return {number}
+ */
+ function countWords(text) {
+    return typeof text === 'string'? text.replace(/[\s]+/gim, ' ').trim().split(' ').length: 'Error! The function expects a string input.';
+   }
+//Control
+console.log(countWords('   You           area programmer   '));
+
+
+   
+   
