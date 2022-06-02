@@ -92,5 +92,25 @@ console.log(calculateRoundedRating(1.2499999));
 console.log(countWords('   You           area programmer   '));
 
 
+//extractYears
+/**
+ * 
+ * @param {string} text 
+ * @return {number[]}
+ */
+function extractYears(text) {
+    let years = [];
+    if (typeof text !== 'string'){
+        return 'Error! The function expects a string input.';
+    } 
+    
+    text.split(' ').forEach((e) => { if(e >= 1990 && e <= 2099) years.push(Math.round(e))});
+    return years;
+}
+//Control
+console.log(extractYears(`Usually people who were born in 1995 can find they first job not later than
+in 2020 but also not earlier than in 2012. Number 11999 is not included in
+the result because it's too big. It is out of range between 1900 and 2099.`));
+   
    
    
